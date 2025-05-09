@@ -1,0 +1,10 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: register-service
+
+integration:
+  order-service:
+    url: ${ORDER_SERVICE_URL:http://localhost:8081}
