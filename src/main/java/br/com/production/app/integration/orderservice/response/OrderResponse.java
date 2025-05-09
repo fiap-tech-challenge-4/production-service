@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -22,7 +23,7 @@ public class OrderResponse {
     private String clientId;
     private BigDecimal totalValue;
     private String status;
-    private List<OrderItemResponse> items;
+    private List<OrderItemResponse> items = new ArrayList<>();
     private String additionalInfo;
 
 }

@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static lombok.AccessLevel.PRIVATE;
 
@@ -42,7 +41,7 @@ public class OrderConverter {
                         .items(convertToOrderResponseList(order.getItems()))
                         .additionalInfo(order.getAdditionalInfo())
                         .build())
-                .collect(Collectors.toList());
+                .toList();
 
         PaginationResponse<GetListOrdersResponse> response = new PaginationResponse<>();
         response.setHasNext(paginationOrderResponse.getHasNext());

@@ -21,6 +21,7 @@
 			**/br/com/production/Startup.java,
 			**/br/com/production/app/entities/**,
 			**/br/com/production/app/exception/**,
+			**/br/com/production/app/integration/**,
 			**/br/com/production/config/**,
 			**/br/com/production/errors/**,
 			**/br/com/production/webui/description/**,
