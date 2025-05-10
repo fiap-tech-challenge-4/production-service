@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: production-service-app
+  labels:
+    app: production-service-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: production-service-app
+  template:
+    metadata:
+      labels:
+        app: production-service-app
+    spec:
+      containers:
+        - name: app
+          image: 791691623793.dkr.ecr.us-east-1.amazonaws.com/production-service:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: production-service-config
+          resources:
+            requests:
+              cpu: "500m"
+            limits:
+              cpu: "1000m"
+          env:
+            - name: SPRING_DATASOURCE_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: production-service-secrets
+                  key: SPRING_DATASOURCE_USERNAME
+            - name: SPRING_DATASOURCE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: production-service-secrets
+                  key: SPRING_DATASOURCE_PASSWORD
