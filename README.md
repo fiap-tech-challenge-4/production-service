@@ -11,12 +11,9 @@ Este serviço é responsável por gerenciar os cadastros essenciais do sistema, 
 Ao centralizar esses cadastros em um único microsserviço, garantimos uma fonte única de verdade para os dados exibidos ao cliente final, simplificando a manutenção e promovendo a consistência entre os sistemas internos e interfaces públicas.
 
 #### Principais Responsabilidades:
-- Cadastro de categorias (ex: Lanches, Bebidas, Sobremesas)
-- Cadastro e manutenção de produtos (com preço, descrição, disponibilidade etc.)
-- Cadastro dos tipos de pagamento: como PIX, Cartão de Crédito, Débito, Dinheiro etc.
-- Gerenciamento de dados de clientes
-- Exposição de endpoints otimizados para consumo via Totem de Autoatendimento
-- Filtragem de produtos por categoria, disponibilidade e destaques
+- Atualizar o status dos pedidos no order-service conforme o andamento da produção na cozinha (ex: "Em preparo", "Pronto")
+- Listar todos os pedidos não finalizados, permitindo que uma tela pública (como um painel de chamada ou monitor de pedidos) exiba os pedidos em andamento para os clientes
+- Atuar como ponte entre o time da cozinha e os demais serviços, garantindo visibilidade e rastreabilidade dos pedidos em tempo real
 
 ## Desenho Técnico Microsserviços
 <div align="center">
