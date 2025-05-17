@@ -6,9 +6,11 @@ Com o crescimento da lanchonete e a adoção de uma arquitetura baseada em micro
 
 ## Solução Proposta
 
-Este serviço é responsável por gerenciar os cadastros essenciais do sistema, incluindo categorias de produtos, produtos disponíveis no cardápio e clientes. Ele também expõe endpoints públicos para o totem de autoatendimento, permitindo a exibição de informações atualizadas sobre os itens disponíveis para pedido.
+Este serviço é responsável por gerenciar o fluxo de produção dos pedidos dentro do sistema. Seu principal papel é atualizar o status dos pedidos conforme eles avançam na cozinha, garantindo que o order-service mantenha um acompanhamento preciso de cada etapa (ex: Recebido, Em Preparo, Pronto).
 
-Ao centralizar esses cadastros em um único microsserviço, garantimos uma fonte única de verdade para os dados exibidos ao cliente final, simplificando a manutenção e promovendo a consistência entre os sistemas internos e interfaces públicas.
+Além disso, o serviço expõe um endpoint público que lista todos os pedidos ainda não finalizados, permitindo que telas visíveis ao cliente (como painéis ou monitores) exibam em tempo real o andamento da produção. Isso oferece mais transparência ao processo e melhora a experiência do cliente durante a espera.
+
+Centralizar essas ações no production-service ajuda a manter a lógica de produção isolada e desacoplada, facilitando a escalabilidade, manutenção e integração com outros componentes do sistema.
 
 #### Principais Responsabilidades:
 - Atualizar o status dos pedidos no order-service conforme o andamento da produção na cozinha (ex: "Em preparo", "Pronto")
