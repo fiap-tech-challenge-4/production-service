@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 import static br.com.production.webui.description.Descriptions.ID;
 import static br.com.production.webui.description.Descriptions.LIMIT;
 import static br.com.production.webui.description.Descriptions.MINIMAL_PAGE;
+import static br.com.production.webui.description.Descriptions.ORDER_STATUS_FILTER;
 import static br.com.production.webui.description.Descriptions.PAGE;
 
 @Validated
@@ -65,7 +66,7 @@ public class OrderStatusController {
             @Parameter(description = LIMIT)
             @RequestParam(required = false, defaultValue = "25")
             final Integer limit,
-            @Parameter(description = "Order status to filter by")
+            @Parameter(description = ORDER_STATUS_FILTER)
             @RequestParam(required = false)
             final String orderStatus) {
         return ResponseEntity.ok(updateOrderStatusCase.getListOrders(page, limit, orderStatus));

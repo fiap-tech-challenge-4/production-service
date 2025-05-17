@@ -16,19 +16,17 @@ public class Descriptions {
     public static final String PAGE = "Page number";
     public static final String LIMIT = "Number of records per page";
     public static final String MINIMAL_PAGE = "Minimal page is 1";
-    public static final String SORT = "Sorting order of the list";
+    public static final String STATUS = "Current status of the order";
+    public static final String DATE = "Date and time when the order was placed";
+    public static final String CLIENT_ID = "Identifier of the client who placed the order";
+    public static final String TOTAL_VALUE = "Total monetary value of the order";
+    public static final String ITEMS_ORDER = "List of items included in the order";
+    public static final String ADDITIONAL_INFO = "Additional information or observations about the order";
+    public static final String PRODUCT_ID = "Identifier of the product";
+    public static final String QUANTITY = "Quantity of the product in the order";
+    public static final String VALUE = "Unit value of the product";
     public static final String DESCRIPTION_PRODUCT = "Product description";
-    public static final String DESCRIPTION_CATEGORY = "Category description";
-    public static final String NAME_CUSTOMER = "Client name";
-    public static final String CPF_CUSTOMER = "Client CPF (Brazilian ID)";
-    public static final String PHONE_CUSTOMER = "Phone number";
-    public static final String EMAIL_CUSTOMER = "Client's email address";
-    public static final String UNIT_PRICE_PRODUCT = "Unit price of the product";
-    public static final String CATEGORY_PRODUCT = "Category associated with the product";
-    public static final String CATEGORY_ID = "Unique identifier of the category";
-    public static final String IMAGE_PRODUCT = "Image to display the product";
-    public static final String DESCRIPTION_PAYMENT_METHOD = "Description of the payment method";
-    public static final String PAYMENT_TYPE_PAYMENT_METHOD = "Type of payment method. Allowed values: [\"DEBITO\", \"CREDITO\", \"PIX\"]";
+    public static final String ORDER_STATUS_FILTER = "Order status to filter by [RECEIVED, PREPARING, READY, COMPLETED]";
 
     // Pagination
     public static final String HAS_NEXT = "Indicates if there is a next page with elements";
