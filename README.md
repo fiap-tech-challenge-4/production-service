@@ -22,6 +22,11 @@ Centralizar essas ações no production-service ajuda a manter a lógica de prod
   <img src="https://i.ibb.co/dsPzD37s/arquitetura.png" alt="Arquitetura de Microsserviços">
 </div>
 
+## Evidência de testes no SonarCloud
+<div align="center">
+  <img src="https://i.ibb.co/BHgBg23L/production-service.jpg" alt="Evidência de testes unitários no sonar">
+</div>
+
 ## Tecnologias
 - **Spring Boot**: Framework para construção de aplicações Java.
     - `spring-boot-starter-web`: Para construir aplicações web.
